@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const quizRoutes = require('./src/routes/quizRoutes');
 const questionRoutes = require('./src/routes/questionRoutes');
 require('dotenv').config();
+const cors = require('cors');
 const app = express();
-
+app.use(cors());
 // Middleware
 app.use(express.json());
 
